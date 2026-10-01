@@ -1,100 +1,82 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sito di Pietro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pietro Burini</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<style>
+body{
+    background:#000;
+    color:#00ff41;
+    font-family: Consolas, monospace;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
 
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-        }
+.terminal{
+    width:700px;
+    max-width:90%;
+    border:2px solid #00ff41;
+    padding:30px;
+    box-shadow:0 0 20px #00ff41;
+}
 
-        .container{
-            background:white;
-            padding:40px;
-            border-radius:20px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.2);
-            text-align:center;
-            max-width:600px;
-            animation: fadeIn 1s ease;
-        }
+.line{
+    margin:15px 0;
+}
 
-        h1{
-            color:#222;
-            margin-bottom:15px;
-            transition:0.3s;
-        }
+.name{
+    font-size:2rem;
+    font-weight:bold;
+}
 
-        h1:hover{
-            color:#ff8c00;
-            transform:scale(1.05);
-        }
+.cursor{
+    animation: blink 1s infinite;
+}
 
-        h4{
-            color:#555;
-            margin-bottom:30px;
-            transition:0.3s;
-        }
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
 
-        h4:hover{
-            color:#00c853;
-        }
+a{
+    color:#00ff41;
+    text-decoration:none;
+}
 
-        .github-link{
-            display:inline-block;
-            text-decoration:none;
-            background:#24292e;
-            color:white;
-            padding:15px 30px;
-            border-radius:50px;
-            font-size:18px;
-            font-weight:bold;
-            transition:0.3s;
-        }
-
-        .github-link:hover{
-            background:#ff8c00;
-            transform:translateY(-3px);
-            box-shadow:0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        @keyframes fadeIn{
-            from{
-                opacity:0;
-                transform:translateY(30px);
-            }
-            to{
-                opacity:1;
-                transform:translateY(0);
-            }
-        }
-    </style>
+a:hover{
+    color:white;
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Ciao, sono Pietro Burini 👋</h1>
+<div class="terminal">
 
-        <h4>Benvenuto nel mio sito personale</h4>
+    <div class="line">
+        > whoami
+    </div>
 
-        <a class="github-link"
-           href="http://burinburen.altervista.org/"
-           target="_blank">
-            🌐 Visita il mio sito
+    <div class="line name">
+        Pietro Burini<span class="cursor">|</span>
+    </div>
+
+    <div class="line">
+        > open website
+    </div>
+
+    <div class="line">
+        <a href="http://burinburen.altervista.org/" target="_blank">
+            [ ACCEDI AL SITO ]
         </a>
     </div>
+
+</div>
 
 </body>
 </html>
